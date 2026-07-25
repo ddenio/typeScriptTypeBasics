@@ -11,3 +11,28 @@ let myName: string = "Bob";
 
 let numberOfWheels: number = 4;
 let isStudent: boolean = false;
+
+//Defining Custom Types
+type Food = string;
+
+let favoriteFood: Food = "pizza";
+
+//Custom Types with Objects
+
+type Person = {
+  name: string;
+  age: number;
+  isStudent: boolean;
+};
+
+let person1: Person = {
+  name: "Joe",
+  age: 42,
+  isStudent: true,
+};
+
+let person2: Person = {
+  name: "Jill",
+  age: 66,
+  isStudent: false,
+};
