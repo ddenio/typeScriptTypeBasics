@@ -23,16 +23,32 @@ type Person = {
   name: string;
   age: number;
   isStudent: boolean;
+  //adding in nested Object types
+  address: {
+    street: string;
+    city: string;
+    country: string;
+  };
 };
 
 let person1: Person = {
   name: "Joe",
   age: 42,
   isStudent: true,
+  address: {
+    street: "123 Main",
+    city: "anytown",
+    country: "USA",
+  },
 };
 
 let person2: Person = {
   name: "Jill",
   age: 66,
   isStudent: false,
+  address: {
+    street: "123 Main",
+    city: "anytown",
+    country: "USA",
+  },
 };
