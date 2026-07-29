@@ -18,17 +18,22 @@ type Food = string;
 let favoriteFood: Food = "pizza";
 
 //Custom Types with Objects
+//Challenge: try to figure out how to move the nested address object type
+//into a seperate type definition. When done correclty, there should be no more
+//red errors in the editor
+
+type Address = {
+  street: string;
+  city: string;
+  country: string;
+};
 
 type Person = {
   name: string;
   age: number;
   isStudent: boolean;
   //adding in nested Object types
-  address: {
-    street: string;
-    city: string;
-    country: string;
-  };
+  address: Address;
 };
 
 let person1: Person = {
