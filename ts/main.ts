@@ -33,18 +33,13 @@ type Person = {
   age: number;
   isStudent: boolean;
   //adding in nested Object types
-  address: Address;
+  address?: Address;
 };
 
 let person1: Person = {
   name: "Joe",
   age: 42,
   isStudent: true,
-  address: {
-    street: "123 Main",
-    city: "anytown",
-    country: "USA",
-  },
 };
 
 let person2: Person = {
@@ -57,3 +52,9 @@ let person2: Person = {
     country: "USA",
   },
 };
+
+function displayInfo(person) {
+  console.log(`${person.name} lives at ${person.address?.street}`);
+}
+
+displayInfo(person1);
