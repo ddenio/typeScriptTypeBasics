@@ -36,25 +36,46 @@ type Person = {
   address?: Address;
 };
 
-let person1: Person = {
+let person1: Persons = {
   name: "Joe",
   age: 42,
   isStudent: true,
 };
 
-let person2: Person = {
+let person2: Persons = {
   name: "Jill",
   age: 66,
   isStudent: false,
-  address: {
-    street: "123 Main",
-    city: "anytown",
-    country: "USA",
-  },
+  // address: {
+  //   street: "123 Main",
+  //   city: "anytown",
+  //   country: "USA",
+  // },
 };
 
-function displayInfo(person) {
-  console.log(`${person.name} lives at ${person.address?.street}`);
-}
+// function displayInfo(person: Person) {
+//   console.log(`${person.name} lives at ${person.address?.street}`);
+// }
 
-displayInfo(person1);
+//displayInfo(person1);
+
+//typing Arrays
+
+let ages: number[] = [100, 101];
+
+type Persons = {
+  name: string;
+  age: number;
+  isStudent: boolean;
+};
+
+/**
+ *  Challenge: Create an array of people objects and
+ * manually type it as an array of Person types
+ *
+ */
+
+let people: Persons[] = [person1, person2];
+
+//addition syntax:
+// let people: Array<Persons> = [person1, person2]
