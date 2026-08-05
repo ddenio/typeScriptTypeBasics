@@ -82,10 +82,18 @@
 
 //Literal Types
 //here typescript infers myName to be a string
-let myName = "Bob";
+//let myName = "Bob";
 
 //Here typescript infers myName2 as the literal string type "Bob"
-const myName2 = "Bob";
+//const myName2 = "Bob";
 //can't reassign literal types,  which makes sense since its a const as well.
 
 //can also write out like :    const myName2: "Bob" = "Bob"
+
+//Unions!
+//think of a boolean can ONLY be true OR false
+//this says UserRole can ONLY be "guest", OR "member" OR "admin"
+
+type UserRole = "guest" | "member" | "admin";
+
+let userRole: UserRole = "guest";
