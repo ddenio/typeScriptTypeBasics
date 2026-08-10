@@ -96,4 +96,26 @@
 
 type UserRole = "guest" | "member" | "admin";
 
-let userRole: UserRole = "guest";
+type User = {
+  username: string;
+  role: UserRole;
+};
+
+const users: User[] = [
+  { username: "john_doe", role: "member" },
+  { username: "jane_doe", role: "admin" },
+  { username: "guest_user", role: "guest" },
+];
+
+//Function return types, we can specify which type of data should be returned from our function, here we specify that this function should always return a User object
+function fetchUserDetails(username: string): User {
+  const user = users.find((user) => user.username === username);
+  if (!user) {
+    throw new Error(`User with username ${username} not found`);
+  }
+  console.log(user);
+  return user;
+}
+
+//fetchUserDetails("Jimmy");
+fetchUserDetails("john_doe");
