@@ -16,6 +16,10 @@ const users2: User2[] = [
 function updateUser(id: number, updates: any) {
   //Find the user in the array by the id
   const userDetail = users2.find((userObj) => userObj.id === id);
+  if (!userDetail) {
+    console.error("User not found!");
+    return;
+  }
   //Use Object.assign to update the found user in place.
   Object.assign(userDetail, updates);
   //Check MDN if you need hlep with using Object.assign
