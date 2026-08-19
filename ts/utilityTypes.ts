@@ -6,6 +6,8 @@ type User2 = {
   role: "member" | "contributor" | "admin";
 };
 
+type UpdatedUser2 = Partial<User2>;
+
 const users2: User2[] = [
   { id: 1, username: "john_doe", role: "member" },
   { id: 2, username: "jane_smith", role: "contributor" },
@@ -13,7 +15,7 @@ const users2: User2[] = [
   { id: 4, username: "charlie_brown", role: "member" },
 ];
 
-function updateUser(id: number, updates: any) {
+function updateUser(id: number, updates: UpdatedUser2) {
   //Find the user in the array by the id
   const userDetail = users2.find((userObj) => userObj.id === id);
   if (!userDetail) {
@@ -26,7 +28,7 @@ function updateUser(id: number, updates: any) {
 }
 
 //Example updates:
-updateUser(1, { username: "new_john_doe" });
+updateUser(1, { username: "new_john_doe2" });
 updateUser(4, { role: "contributor" });
 
 console.log(users2);
