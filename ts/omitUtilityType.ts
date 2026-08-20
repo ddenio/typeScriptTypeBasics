@@ -24,7 +24,7 @@ function updateUser(id: number, updates: UpdatedUser) {
   Object.assign(foundUser, updates);
 }
 
-function addNewUser(newUser: any): User {
+function addNewUser(newUser: Omit<User, "id">): User {
   const user: User = {
     id: nextUserId++,
     ...newUser,
