@@ -39,6 +39,6 @@ function addNewUser(newUser: Omit<User, "id">): User {
 }
 
 //example usage:
-addNewUser({ username: "joe_schmoe", role: "member" });
+addNewUser({ username: "joe_schmoe", role: "contributor" });
 
 console.log(users);
